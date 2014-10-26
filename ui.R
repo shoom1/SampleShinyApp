@@ -6,7 +6,7 @@ library(rCharts)
 shinyUI(pageWithSidebar(
   
   # Application title
-  headerPanel("Time Series Analysis"),
+  headerPanel("Stocks Time Series Analysis"),
   
   # Sidebar with controls to select the variable to plot against mpg
   # and to specify whether outliers should be included
@@ -44,7 +44,10 @@ shinyUI(pageWithSidebar(
 #                           plotOutput('ar1.resid_qq'))),         
         tabPanel('Autocorrelations',
           textOutput('companyName3'),
-          plotOutput('acfPlot'))         
+          plotOutput('acfPlot')),
+
+        tabPanel('Documentation',
+                 includeHTML('Documentation.html'))
         
     )
   )
